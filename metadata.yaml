@@ -1,0 +1,9 @@
+# Copyright 2021 Xav Paice
+# See LICENSE file for licensing details.
+name: script-deployer
+description: |
+  Takes a script from config and deploys it in a specified location.
+
+  Ensures the script is executable, by default owned by root.
+summary: |
+  Takes a script from config and deploys it in a specified location.

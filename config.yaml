@@ -1,0 +1,9 @@
+options:
+  script:
+    default: ''
+    description: Custom script to install
+    type: string
+  location:
+    default: ''
+    description: Location of the script file
+    type: string
