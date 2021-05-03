@@ -1,6 +1,7 @@
 # Copyright 2021 Xav Paice
 # See LICENSE file for licensing details.
 name: script-deployer
+subordinate: true
 description: |
   Takes a script from config and deploys it in a specified location.
 
