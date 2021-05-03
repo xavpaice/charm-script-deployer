@@ -8,3 +8,7 @@ description: |
   Ensures the script is executable, by default owned by root.
 summary: |
   Takes a script from config and deploys it in a specified location.
+requires:
+  container:
+    interface: juju-info
+    scope: container

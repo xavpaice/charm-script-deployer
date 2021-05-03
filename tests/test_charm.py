@@ -17,10 +17,10 @@ class TestCharm(unittest.TestCase):
     @patch('__main__.__builtins__.open', new_callable=mock_open)
     def test_config_changed(self, m_open, mock_chmod):
         self.harness.update_config({"location": self.location,
-                                    "script": "#mock data"})
+                                    "script": "I21vY2sgZGF0YQo="})
 
         mock_chmod.assert_called_with(self.location, 0o755)
         m_open.assert_called_with('/tmp/foo-test', 'w')
         handle = m_open()
-        handle.write.assert_any_call("#mock data")
+        handle.write.assert_any_call("#mock data\n")
         self.assertEqual(self.harness.model.unit.status, ActiveStatus())

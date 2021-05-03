@@ -1,9 +1,11 @@
 options:
   script:
     default: ''
-    description: Custom script to install
+    description: |
+      Base64 encoded text to be stored as an executable (script)
+      on the target unit.
     type: string
   location:
     default: ''
-    description: Location of the script file
+    description: Location of the file to deploy, including filename.
     type: string

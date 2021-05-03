@@ -6,6 +6,7 @@
 
 """Deploy an aribtrary script to a specified location."""
 
+from base64 import b64decode
 import logging
 import os
 
@@ -29,8 +30,9 @@ class ScriptDeployer(CharmBase):
 
     def _on_config_changed(self, _):
         """Deploy a custom script supplied by config."""
-        script = self.config["script"]
+        script = b64decode(self.config["script"]).decode()
         location = self.config["location"]
+        print(script)
         logger.debug("Deploying script to %s", location)
         with open(location, 'w') as f:
             f.write(script)
